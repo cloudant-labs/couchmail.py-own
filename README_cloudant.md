@@ -40,6 +40,10 @@ can search through your imported emails.
 
 ## Design Doc (aka CouchApp)
 
+If you don't already have couchapp installed you'll have to do that first:
+
+    $ pip install couchapp
+
     $ cd couchapp
     $ couchapp push . http://<USERNAME>:<PASSWORD>@<USERNAME>.cloudant.com/mail
 
