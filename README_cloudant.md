@@ -44,6 +44,8 @@ If you don't already have couchapp installed you'll have to do that first:
 
     $ pip install couchapp
 
+then
+
     $ cd couchapp
     $ couchapp push . http://<USERNAME>:<PASSWORD>@<USERNAME>.cloudant.com/mail
 
