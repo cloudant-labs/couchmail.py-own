@@ -24,6 +24,8 @@ password for GMail.  Here is what a config should look like
 	; might want to sha1() the email address to
 	; be the mailbox name.
 
+You need to create the 'mail' db in your Cloudant account.
+
 Then you'll want to make sure you have all the libraries.
 
     $ pip install -r requirements.txt
@@ -44,7 +46,12 @@ If you don't already have couchapp installed you'll have to do that first:
 
     $ pip install couchapp
 
-then
+If you are running iOS Mavericks it's possible you'll get a compiling error.  You can brute force your way
+around this by using:
+
+    $ export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
+
+Then
 
     $ cd couchapp
     $ couchapp push . http://<USERNAME>:<PASSWORD>@<USERNAME>.cloudant.com/mail
